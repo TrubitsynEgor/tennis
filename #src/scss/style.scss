@@ -1,17 +1,32 @@
-@import "mixin";
-@import "nullstyle";
-@import "fonts";
-@import "header";
 // @import "ui";
-@import "footer";
+@import "mixin";
+// Components: ============>
 @import "components";
+// Nullstyle: ============>
+@import "nullstyle";
+body {
+	font-family: Gilroy;
+	font-weight: 400;
+}
+.container{
+	max-width: 1240px;
+	margin: 0 auto;
+	padding: 0 15px;
+	min-height: 100%
+}
+// Fonts: ============>
+@import "fonts";
+// Header: ============>
+@import "header";
+// Section - hero ======>
+@import "hero";
+
+
+// Footer: ============>
+@import "footer";
+
 
 //*==================>
 
 
 
-body {
-	font-family: Gilroy;
-	font-weight: 400;
-
-}
