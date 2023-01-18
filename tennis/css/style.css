@@ -1,5 +1,7 @@
 :root {
   --light-color: #ffffff;
+  --accent-color: #8d86c9;
+  --bg-color: #f7ece1;
 }
 
 /*null*/
@@ -219,6 +221,11 @@ body {
 
 .header__hero-playimg {
   padding-right: 30px;
+  cursor: pointer;
+}
+
+.header__hero-playimg:hover {
+  fill: orangered;
 }
 
 .header__hero-text {
@@ -240,7 +247,7 @@ body {
 
 .header__box-item {
   padding: 50px 50px;
-  background: #8D86C9;
+  background: var(--accent-color);
   position: relative;
   width: 295px;
   height: 151px;
@@ -258,12 +265,30 @@ body {
   font-size: 24px;
   line-height: 140%;
   color: var(--light-color);
+  position: relative;
+}
+
+.header__hero-link:hover {
+  text-shadow: 2px 2px 10px orangered;
+  border-bottom: 2px solid orangered;
 }
 
 .header__hero-img {
   position: absolute;
-  left: 0;
-  top: 0;
+  right: -30%;
+  top: -10%;
+  fill: var(--light-color);
+}
+
+.header__hero-img:hover {
+  fill: orangered;
+}
+
+.header__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
 }
 
 .nav__list {
@@ -280,11 +305,17 @@ body {
   color: var(--light-color);
 }
 
+.nav__link:hover {
+  text-shadow: 2px 2px 10px orangered;
+  border-bottom: 2px solid orangered;
+}
+
 .social {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 10px;
+  fill: var(--light-color);
+}
+
+.social:hover {
+  fill: orangered;
 }
 
 @media screen and (max-width: 1024px) and (max-height: 600px) {

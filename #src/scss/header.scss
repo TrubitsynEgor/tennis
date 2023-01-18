@@ -1,8 +1,4 @@
 
-
-
-
-
 .header {
 	background: url('../img/hero_bg.svg');
 	@media screen and (max-width:650px) and (max-height:916px) {
@@ -20,7 +16,6 @@
 	@media screen and (max-width:1024px) and (max-height:600px) {
 		min-height: 167vh;
 	}
-
 	&__row {
 		display: flex;
 		justify-content: space-between;
@@ -36,16 +31,6 @@
 			height:  1px;
 			width: 100vw;
 		}
-	}
-
-	&__col{
-		
-	}
-
-	&__logo {
-	}
-
-	&__social {
 	}
 	&__hero{
 	display: flex;
@@ -87,6 +72,13 @@
 	}
 	&__hero-playimg {
 		padding-right: 30px;
+		cursor: pointer;
+
+	}
+
+	&__hero-playimg:hover{
+		fill: orangered;
+		
 	}
 	&__hero-text {
 		font-style: normal;
@@ -106,7 +98,7 @@
 	}
 	&__box-item {
 		padding:50px 50px;
-		background: #8D86C9;
+		background: var(--accent-color);
 		position: relative;
 		width: 295px;
 		height: 151px;
@@ -122,10 +114,23 @@
 		font-size: 24px;
 		line-height: 140%;
 		color: var(--light-color);
+		position: relative;
+	}
+	&__hero-link:hover{
+		text-shadow: 2px 2px 10px orangered;
+		border-bottom: 2px solid orangered;
 	}
 	&__hero-img {
 		position: absolute;
-		left: 0;top: 0;
+		right: -30%;top: -10%;
+		fill: var(--light-color);
+	}
+	&__hero-img:hover{
+		fill: orangered;
+	}
+	&__social{
+		display: flex;
+		gap: 10px;
 	}
 }
 .nav {
@@ -133,18 +138,22 @@
 		display: flex;
 		gap: 20px;
 	}
-	&__item {
-	}
 	&__link {
 		font-weight: 500;
 		font-size: 14px;
 		line-height: 140%;
 		color: var(--light-color);
 	}
+	&__link:hover{
+		text-shadow: 2px 2px 10px orangered;
+		border-bottom: 2px solid orangered;
+	}
 }
-.social {
-	display: flex;
-	gap: 10px;
+.social{
+	fill: var(--light-color);
+}
+.social:hover {
+fill: orangered;
 }
 
 
