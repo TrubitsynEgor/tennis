@@ -1,0 +1,57 @@
+.header {
+
+}
+
+.container{
+	max-width: 1240px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+
+
+
+.header {
+	background: url('../img/hero_bg.svg');
+	border-bottom: 1px solid #ffffff;
+	padding: 2.1em;
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__col{
+		
+	}
+
+	&__logo {
+	}
+
+	&__social {
+	}
+}
+.logo {
+}
+.nav {
+
+	&__list {
+		display: flex;
+		gap: 20px;
+	}
+
+	&__item {
+	}
+
+	&__link {
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 140%;
+		color: var(--light-color);
+	}
+}
+.social {
+	display: flex;
+	gap: 10px;
+}
