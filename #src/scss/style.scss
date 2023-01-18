@@ -8,6 +8,9 @@ body {
 	font-family: Gilroy;
 	font-weight: 400;
 }
+body.lock {
+	overflow: hidden;
+}
 .container{
 	max-width: 1240px;
 	margin: 0 auto;
@@ -18,8 +21,8 @@ body {
 @import "fonts";
 // Header: ============>
 @import "header";
-// Section - hero ======>
-@import "hero";
+// mobile-menu ======>
+@import "mobile-menu";
 
 
 // Footer: ============>
