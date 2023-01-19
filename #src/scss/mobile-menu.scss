@@ -1,11 +1,7 @@
 .mobile-munu {
-	
-	.mobile-munu.active {
-		
-	}
 	&__list {
 		height: 100vh;
-	background-color: rgba(255, 255, 255, 0.5);
+	background-color: rgba(255, 255, 255, 0.95);
 	width: 320px;
 	position: fixed;
 	top: 0;
@@ -44,7 +40,7 @@
 
 	&__btn {
 		position: fixed;
-		top: 35px;right: 0;
+		top: 34px;right: 0;
 		z-index: 50;
 		
 	}

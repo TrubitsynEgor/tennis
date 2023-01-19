@@ -17,13 +17,5 @@ menuBtnClose.addEventListener('click', () => {
 	menuBtnOpen.classList.remove('active');
 	body.classList.remove('lock')
 })
-menuList.addEventListener('click', function (e) {
-	let target = e.target;
-	if (!target) {
-		menuList.classList.remove('active');
-		menuBtnClose.classList.remove('active');
-		menuBtnOpen.classList.remove('active');
-		body.classList.remove('lock')
-	}
-})
+
 

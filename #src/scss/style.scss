@@ -16,6 +16,10 @@ body.lock {
 	margin: 0 auto;
 	padding: 0 15px;
 	min-height: 100%
+	
+}
+@media screen and (max-width:280px) {
+	.container {padding: 0;}
 }
 // Fonts: ============>
 @import "fonts";
@@ -23,6 +27,11 @@ body.lock {
 @import "header";
 // mobile-menu ======>
 @import "mobile-menu";
+// gallery ======>
+@import "gallery";	
+// about ======>
+@import "about";	
+
 
 
 // Footer: ============>
