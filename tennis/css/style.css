@@ -404,7 +404,7 @@ body.lock {
 }
 
 .mobile-munu__btn--open svg {
-  fill: var(--light-color);
+  fill: var(--dark-color);
 }
 
 .mobile-munu__btn--open.active {
@@ -629,7 +629,7 @@ body.lock {
 
 .price__row {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 50%);
+  grid-template-columns: repeat(auto-fit, 50%);
 }
 
 .price__title {
@@ -658,6 +658,7 @@ body.lock {
 }
 
 .price__acc-title {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -677,6 +678,31 @@ body.lock {
   margin-right: 100px;
 }
 
+.price__acc-title::after {
+  content: "";
+  background-image: url("../img/price/price_arrow_icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  right: 5.4%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.price__acc-title.active::after {
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  top: 25%;
+}
+
 .price__acc-title:not(:last-child) {
   margin-bottom: 25px;
 }
@@ -686,13 +712,23 @@ body.lock {
 }
 
 .price__acc-text {
-  display: none;
+  height: 0;
+  overflow: hidden;
   line-height: 140%;
   text-align: center;
   color: var(--dark-color);
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  margin-right: 100px;
+}
+
+.price__acc-text.active {
   margin-bottom: 30px;
   border: 1px solid #f7ece1;
   padding: 20px 0;
+  height: auto;
+  overflow: visible;
 }
 
 .price__slider-slide {
@@ -763,6 +799,26 @@ body.lock {
     margin-left: 0;
     margin-top: 20px;
   }
+
+  .price__row {
+    grid-template-columns: repeat(auto-fit, 100%);
+    gap: 20px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .price__title {
+    margin-bottom: 25px;
+  }
+
+  .price__acc-title {
+    margin-left: 100px;
+  }
+
+  .price__acc-text {
+    margin-left: 100px;
+  }
 }
 
 @media screen and (max-width: 768px) and (max-height: 916px) {
@@ -805,6 +861,21 @@ body.lock {
 @media screen and (max-width: 620px) {
   .header {
     min-height: 136vh;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .price__acc-title {
+    margin: 0;
+  }
+
+  .price__acc-text {
+    margin: 0;
+  }
+
+  .price__slide-img {
+    border: none;
+    padding: 0;
   }
 }
 

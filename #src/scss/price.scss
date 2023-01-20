@@ -2,8 +2,14 @@
 	margin-bottom: 150px;
 	&__row {
 		display: grid;
-		grid-template-columns: repeat(auto-fill, 50%);
+		grid-template-columns: repeat(auto-fit, 50%);
+		@media screen  and (max-width:998px){
+			grid-template-columns: repeat(auto-fit, 100%);
+			gap: 20px;
+			align-items: center;
 		
+			
+		}
 	}
 
 	&__col {
@@ -14,6 +20,9 @@
 		margin-bottom: 75px;
 		display: flex;
 		justify-content: space-between;
+		@media screen  and (max-width:998px){
+			margin-bottom: 25px;
+		}
 	}
 	.price__slider-btn{
 		display: flex;
@@ -35,6 +44,7 @@
 	}
 
 	&__acc-title {
+		position: relative;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -46,10 +56,35 @@
 		background-color: var(--accent-color);
 		cursor: pointer;
 		margin-right: 100px;
+		@media screen  and (max-width:998px){
+			margin-left: 100px;
+		}
+		@media screen  and (max-width:580px){
+			margin: 0;
+		}
+	}
+	&__acc-title::after{
+		content: '';
+		background-image: url('../img/price/price_arrow_icon.svg');
+		background-repeat: no-repeat;
+		background-position: center;
+		position: absolute;
+		right: 5.4%;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 30px;
+		height: 30px;
+		transition: all 0.3s ease 0s;
+		
+	}
+	&__acc-title.active::after{
+		transform: rotate(-90deg);
+		top: 25%;
 	}
 	&__acc-title:not(:last-child){
 		margin-bottom: 25px;
 	}
+
 
 
 	&__acc-img {
@@ -57,14 +92,29 @@
 		
 	}
 
+
 	&__acc-text {
-		display: none;
+		height: 0;
+		overflow: hidden;
 		line-height: 140%;
 		text-align: center;
 		color: var(--dark-color);
+		transition: all 0.3s ease 0s;
+		margin-right: 100px;
+		@media screen  and (max-width:998px){
+			margin-left: 100px;
+		}
+		@media screen  and (max-width:580px){
+			margin: 0;
+		}
+	}
+	&__acc-text.active{
 		margin-bottom: 30px;
 		border:1px solid #f7ece1 ;
 		padding: 20px 0;
+		
+		height: auto;
+		overflow: visible;
 	}
 
 	&__arrow-img {
@@ -73,6 +123,7 @@
 	}
 
 	&__slider {
+
 	}
 
 	&__slider-slide {
@@ -83,6 +134,10 @@
 		border:1px solid #f7ece1 ;
 		padding: 30px 25px;
 		max-width: 100%;
+		@media screen  and (max-width:580px){
+			border:none ;
+			padding: 0;
+		}
 	}
 
 	&__slide-title {
