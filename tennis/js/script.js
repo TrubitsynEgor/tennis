@@ -1,9 +1,9 @@
 'use strict'
 
-const menuBtnOpen = document.querySelector('.mobile-munu__btn--open');
-const menuBtnClose = document.querySelector('.mobile-munu__btn--close');
-const menuList = document.querySelector('.mobile-munu__list');
-const body = document.querySelector('body');
+const menuBtnOpen = document.querySelector('.mobile-munu__btn--open')
+const menuBtnClose = document.querySelector('.mobile-munu__btn--close')
+const menuList = document.querySelector('.mobile-munu__list')
+const body = document.querySelector('body')
 
 menuBtnOpen.addEventListener('click', () => {
 	menuList.classList.add('active');
@@ -53,5 +53,26 @@ const swiper = new Swiper('.swiper', {
 		},
 	}
 });
+
+const priceSwiper = new Swiper('.price__slider', {
+  speed: 400,
+  spaceBetween: 100,
+
+	
+	navigation: {
+		nextEl: '.price__arrow-right',
+		prevEl: '.price__arrow-left',
+	},
+
+	spaceBetween: 0,
+	loop: true,
+
+});
+
+
+
+
+
+
 
 
