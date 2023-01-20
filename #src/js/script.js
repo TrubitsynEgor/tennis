@@ -16,6 +16,42 @@ menuBtnClose.addEventListener('click', () => {
 	menuBtnClose.classList.remove('active');
 	menuBtnOpen.classList.remove('active');
 	body.classList.remove('lock')
-})
+});
+
+const swiper = new Swiper('.swiper', {
+	speed: 400,
+	spaceBetween: 100,
+
+	navigation: {
+		nextEl: '.trainers__slide-next',
+		prevEl: '.trainers__slide-prev',
+	},
+
+	slidesPerView: 6,
+	spaceBetween: 16,
+	loop: true,
+
+	breakpoints: {
+		'@0.05': {
+			slidesPerView: 1,
+			spaceBetween: 0,
+		},
+		'@0.45': {
+			slidesPerView: 2,
+		},
+		'@0.75': {
+			slidesPerView: 3,
+		},
+		'@1.00': {
+			slidesPerView: 4,
+		},
+		'@1.25': {
+			slidesPerView: 5,
+		},
+		'@1.50': {
+			slidesPerView: 6,
+		},
+	}
+});
 
 

@@ -1,0 +1,77 @@
+.trainers {
+	margin-bottom: 150px;
+	&__title {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 75px;
+	@media screen and (max-width: 400px) {
+		margin-bottom: 40px;
+	}
+
+	}
+	&__nav-btn{
+		display: flex;
+		gap: 20px;
+		@media screen and (max-width: 400px) {
+			gap: 10px;
+		}
+		
+	}
+	&__slide-prev,
+	&__slide-next	{
+		display: block;
+		padding: 10px;
+		background-color: var(--accent-color);
+		cursor: pointer;
+	}
+
+	&__slider {
+		
+	}
+
+	&__slider-wrap {
+	
+	}
+
+	&__slider-slide {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		
+	}
+
+	&__slide-img {
+		border: 1px solid #F7ECE1;
+		padding: 0 10px;
+		transition: all 0.3s ease 0s;
+		
+		
+	}
+	&__slide-img:hover{
+		transform: scale(1.1);
+	}
+
+	&__slide-title {
+		font-weight: 600;
+		font-size: 21px;
+		line-height: 140%;
+		text-align: center;
+		color: var(--dark-color);
+		margin: 25px 0px 15px 0px;
+		
+	}
+
+	&__slide-text {
+		line-height: 140%;
+		text-align: center;
+		color: var(--dark-color);
+	}
+}
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+

@@ -7,6 +7,7 @@
 body {
 	font-family: Gilroy;
 	font-weight: 400;
+	font-size: 14px;
 }
 body.lock {
 	overflow: hidden;
@@ -21,6 +22,15 @@ body.lock {
 @media screen and (max-width:280px) {
 	.container {padding: 0;}
 }
+.title {
+	font-weight: 700;
+		font-size: 36px;
+		line-height: 140%;
+		color: var(--dark-color);
+		@media screen and (max-width: 400px) {
+			font-size: 28px;
+		}
+}
 // Fonts: ============>
 @import "fonts";
 // Header: ============>
@@ -28,9 +38,11 @@ body.lock {
 // mobile-menu ======>
 @import "mobile-menu";
 // gallery ======>
-@import "gallery";	
+@import "gallery";
 // about ======>
-@import "about";	
+@import "about";
+// trainers ======>
+@import "trainers";
 
 
 
