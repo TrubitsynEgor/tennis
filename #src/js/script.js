@@ -93,18 +93,57 @@ accBtn.forEach(el =>{
 const photoSwiper = new Swiper('.photo__slider', {
   speed: 400,
   spaceBetween: 100,
-
-	
 	navigation: {
 		nextEl: '.photo__arrow-right',
 		prevEl: '.photo__arrow-left',
 	},
-
 	spaceBetween: 0,
 	loop: true,
-
 });
 
+
+const tabsLink = document.querySelectorAll('.rules__nav-link');
+const tabsBody = document.querySelectorAll('.rules__col');
+
+tabsLink.forEach(el => {
+	el.addEventListener('click', () => {
+
+		tabsBody.forEach(el => {
+			el.classList.remove('active')
+		});
+		const content = document.querySelector('#' + el.dataset.link);
+		content.classList.add('active');
+
+		tabsLink.forEach(el => {
+			el.classList.remove('active')
+		});
+
+		el.classList.add('active')
+
+	})
+})
+
+
+const accLink = document.querySelectorAll('.rules__acc-link');
+const accBody = document.querySelectorAll('.rules__col');
+
+accLink.forEach(el => {
+	el.addEventListener('click', () => {
+
+		accBody.forEach(el => {
+			el.classList.remove('active')
+		});
+		const content = document.querySelector('#' + el.dataset.acc);
+		content.classList.add('active');
+
+		accLink.forEach(el => {
+			el.classList.remove('active')
+		});
+
+		el.classList.add('active')
+
+	})
+})
 
 
 
