@@ -31,6 +31,30 @@ body.lock {
 			font-size: 28px;
 		}
 }
+.page-title{
+	padding: 30px 0 60px;
+		font-weight: 700;
+		font-size: 48px;
+		line-height: 140%;
+		text-align: center;
+		color: var(--light-color);
+		@media screen and (max-width: 550px) {
+			padding: 15px 0 30px;
+		}
+}
+.slider-btn{
+	display: flex;
+	gap: 20px;
+	@media screen and (max-width: 400px) {
+		gap: 10px;
+	}
+}
+.slider-btn img{
+	display: block;
+		padding: 10px;
+		background-color: var(--accent-color);
+		cursor: pointer;
+}
 // Fonts: ============>
 @import "fonts";
 // Header: ============>

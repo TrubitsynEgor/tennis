@@ -121,6 +121,29 @@ body.lock {
   color: var(--dark-color);
 }
 
+.page-title {
+  padding: 30px 0 60px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 140%;
+  text-align: center;
+  color: var(--light-color);
+}
+
+.slider-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+
+.slider-btn img {
+  display: block;
+  padding: 10px;
+  background-color: var(--accent-color);
+  cursor: pointer;
+}
+
 @font-face {
   font-family: "Gilroy";
   font-display: swap;
@@ -551,6 +574,127 @@ body.lock {
 
 .header-about {
   background-image: url(../img/about/about_bg.svg);
+  margin-bottom: 80px;
+}
+
+.photo {
+  margin-bottom: 150px;
+}
+
+.photo__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.photo__slider-btn {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 140%;
+  color: var(--light-color);
+  background-color: var(--accent-color);
+  padding: 10px 20px;
+  display: block;
+  max-width: 145px;
+  position: absolute;
+  left: 5%;
+  bottom: 13%;
+}
+
+.photo__slider-slide {
+  position: relative;
+}
+
+.photo__slider-slide img {
+  border: 1px solid #f7ece1;
+  padding: 25px 20px;
+  max-width: 100%;
+}
+
+.aboutclub {
+  margin-bottom: 120px;
+}
+
+.aboutclub__title {
+  margin-bottom: 60px;
+}
+
+.aboutclub__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.aboutclub__col:last-child {
+  padding: 80px 60px 100px 140px;
+  background-color: var(--bg-color);
+  -webkit-transform: translateX(-10%);
+      -ms-transform: translateX(-10%);
+          transform: translateX(-10%);
+  min-width: 856px;
+}
+
+.aboutclub__col-img {
+  position: relative;
+  z-index: 5;
+}
+
+.aboutclub__col-title {
+  margin-bottom: 40px;
+  font-size: 32px;
+}
+
+.aboutclub__col-text {
+  margin-bottom: 15px;
+  line-height: 140%;
+  color: var(--dark-color);
+}
+
+.aboutclub__col-text:last-child {
+  margin-bottom: 35px;
+}
+
+.aboutclub__col-stat {
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-template-columns: 30% 40% 30%;
+}
+
+.aboutclub__col-stat-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.aboutclub__col-stat-item:not(:last-child) {
+  margin-right: 15px;
+}
+
+.aboutclub__col-stat-accent {
+  font-size: 55px;
+  color: var(--accent-color);
+  display: block;
+  margin-right: 15px;
+}
+
+.aboutclub__col-stat-desc {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 140%;
+  color: var(--dark-color);
 }
 
 .trainers {
@@ -565,21 +709,6 @@ body.lock {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 75px;
-}
-
-.trainers__nav-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 20px;
-}
-
-.trainers__slide-prev,
-.trainers__slide-next {
-  display: block;
-  padding: 10px;
-  background-color: var(--accent-color);
-  cursor: pointer;
 }
 
 .trainers__slider-slide {
@@ -644,21 +773,6 @@ body.lock {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-.price .price__slider-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 15px;
-}
-
-.price .price__arrow-left,
-.price .price__arrow-right {
-  display: block;
-  cursor: pointer;
-  padding: 10px;
-  background-color: var(--accent-color);
 }
 
 .price__acc-title {
@@ -758,15 +872,6 @@ body.lock {
 .header-news {
   background-image: url("../img/news/news_bg.svg");
   margin-bottom: 80px;
-}
-
-.header-news__title {
-  color: var(--light-color);
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 140%;
-  text-align: center;
-  padding: 30px 0 60px;
 }
 
 .cards {
@@ -872,6 +977,21 @@ body.lock {
   fill: orangered;
 }
 
+@media screen and (max-width: 1294px) {
+  .aboutclub__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .aboutclub__col:last-child {
+    -webkit-transform: translateY(-10%);
+        -ms-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+}
+
 @media screen and (max-width: 1240px) and (max-height: 936px) {
   .header {
     min-height: 120vh;
@@ -925,6 +1045,10 @@ body.lock {
   .about__col:last-child {
     margin-left: 0;
     margin-top: 20px;
+  }
+
+  .aboutclub__col:last-child {
+    padding: 80px;
   }
 
   .price__row {
@@ -988,6 +1112,30 @@ body.lock {
     padding: 50px;
   }
 
+  .header-about {
+    margin-bottom: 40px;
+  }
+
+  .photo {
+    margin-bottom: 40px;
+  }
+
+  .photo__slider-slide img {
+    border: none;
+    padding: 0;
+    height: 350px;
+  }
+
+  .aboutclub {
+    margin-bottom: 40px;
+  }
+
+  .aboutclub__col:last-child {
+    min-width: 606px;
+    padding: 40px;
+    padding-top: 80px;
+  }
+
   .cards {
     margin-bottom: 60px;
   }
@@ -1025,8 +1173,29 @@ body.lock {
 }
 
 @media screen and (max-width: 550px) {
+  .page-title {
+    padding: 15px 0 30px;
+  }
+
   .header__row {
     padding: 2.1em 2.1em 2.1em 0.5em;
+  }
+
+  .photo__slider-slide img {
+    height: 250px;
+  }
+
+  .aboutclub__col:last-child {
+    min-width: 300px;
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
+    padding: 10px;
+    padding-top: 40px;
+  }
+
+  .aboutclub__col-title {
+    font-size: 28px;
   }
 
   .trainers {
@@ -1070,11 +1239,19 @@ body.lock {
   .about__col-subtitle {
     font-size: 18px;
   }
+
+  .aboutclub__col-stat {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media screen and (max-width: 400px) {
   .title {
     font-size: 28px;
+  }
+
+  .slider-btn {
+    gap: 10px;
   }
 
   .gallery__row {
@@ -1088,10 +1265,6 @@ body.lock {
 
   .trainers__title {
     margin-bottom: 40px;
-  }
-
-  .trainers__nav-btn {
-    gap: 10px;
   }
 }
 

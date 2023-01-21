@@ -90,6 +90,20 @@ accBtn.forEach(el =>{
 })
 
 
+const photoSwiper = new Swiper('.photo__slider', {
+  speed: 400,
+  spaceBetween: 100,
+
+	
+	navigation: {
+		nextEl: '.photo__arrow-right',
+		prevEl: '.photo__arrow-left',
+	},
+
+	spaceBetween: 0,
+	loop: true,
+
+});
 
 
 

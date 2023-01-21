@@ -13,19 +13,11 @@
 
 	}
 	&__nav-btn{
-		display: flex;
-		gap: 20px;
-		@media screen and (max-width: 400px) {
-			gap: 10px;
-		}
 		
 	}
 	&__slide-prev,
 	&__slide-next	{
-		display: block;
-		padding: 10px;
-		background-color: var(--accent-color);
-		cursor: pointer;
+
 	}
 
 	&__slider {
