@@ -549,6 +549,10 @@ body.lock {
   background-color: var(--accent-color);
 }
 
+.header-about {
+  background-image: url(../img/about/about_bg.svg);
+}
+
 .trainers {
   margin-bottom: 150px;
 }
@@ -751,6 +755,75 @@ body.lock {
   bottom: 18%;
 }
 
+.header-news {
+  background-image: url("../img/news/news_bg.svg");
+  margin-bottom: 80px;
+}
+
+.header-news__title {
+  color: var(--light-color);
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 140%;
+  text-align: center;
+  padding: 30px 0 60px;
+}
+
+.cards {
+  margin-bottom: 120px;
+}
+
+.cards__box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 32.7%);
+  gap: 10px;
+}
+
+.cards__item {
+  padding: 25px 30px;
+  border: 1px solid #f7ece1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.cards__item-img {
+  max-width: 100%;
+}
+
+.cards__item-data {
+  padding: 20px 0 12px;
+  line-height: 140%;
+  color: var(--dark-color);
+  opacity: 0.5;
+}
+
+.cards__item-desc {
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 140%;
+  color: var(--dark-color);
+  padding-bottom: 20px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.cards__item-btn {
+  display: block;
+  padding: 10px 20px;
+  background-color: var(--accent-color);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 140%;
+  color: var(--light-color);
+  max-width: 137px;
+}
+
 .footer {
   background-color: var(--bg-color);
 }
@@ -873,6 +946,10 @@ body.lock {
   .price__acc-text {
     margin-left: 100px;
   }
+
+  .cards__box {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media screen and (max-width: 768px) and (max-height: 916px) {
@@ -909,6 +986,20 @@ body.lock {
 
   .about__col:last-child {
     padding: 50px;
+  }
+
+  .cards {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .cards__box {
+    grid-template-columns: 1fr;
+  }
+
+  .cards__item {
+    padding: 10px 15px;
   }
 }
 
