@@ -1,0 +1,57 @@
+.footer {
+	background-color: var(--bg-color);
+	&__row {
+		padding: 30px 0;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__copy {
+		font-weight: 500;
+font-size: 14px;
+line-height: 140%;
+opacity: .3;
+color: var(--dark-color);
+	}
+
+	&__nav {
+		
+	}
+
+	&__nav-link {
+		color: var(--dark-color);
+		padding-right: 10px;
+		@media screen and (max-width:1034px){
+			padding: 0;
+		}
+	}
+
+
+
+	&__social {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+	&__social-img {
+		fill: var(--accent-color);
+		
+	}
+	&__social-img:hover{
+		fill: orangered;
+	}
+}
+.nav {
+
+	&__list {
+	}
+
+	&__item {
+	}
+
+	&__link {
+	}
+}
+.social {
+}

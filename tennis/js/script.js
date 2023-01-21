@@ -76,19 +76,15 @@ const accArrow = document.querySelectorAll('.price__acc-img');
 
 accBtn.forEach(el =>{
 	el.addEventListener('click', () => {
+
 		let content = el.nextElementSibling;
-		
-		
 		if(content.style.height){
 			accContent.forEach(el => el.classList.remove('active'));
-			
 		}else{
-			
 			accContent.forEach(el => el.classList.remove('active'));
 			content.classList.toggle('active');
 			accBtn.forEach(el => el.classList.remove('active'));
 			el.classList.toggle('active');
-		
 		}
 	})
 })

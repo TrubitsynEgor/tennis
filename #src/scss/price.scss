@@ -1,5 +1,8 @@
 .price {
 	margin-bottom: 150px;
+	@media screen and (max-width: 550px) {
+		margin-bottom: 40px;
+	}
 	&__row {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, 50%);
